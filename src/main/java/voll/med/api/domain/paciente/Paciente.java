@@ -1,11 +1,8 @@
-package voll.med.api.paciente;
+package voll.med.api.domain.paciente;
 
 import jakarta.persistence.*;
-import jakarta.validation.Valid;
-import jakarta.validation.constraints.NotBlank;
-import jakarta.validation.constraints.NotNull;
 import lombok.*;
-import voll.med.api.endereco.Endereco;
+import voll.med.api.domain.endereco.Endereco;
 
 @Table(name="pacientes")
 @Entity(name="Paciente")

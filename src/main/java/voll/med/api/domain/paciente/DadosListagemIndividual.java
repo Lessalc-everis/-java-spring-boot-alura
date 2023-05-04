@@ -1,4 +1,6 @@
-package voll.med.api.paciente;
+package voll.med.api.domain.paciente;
+
+import voll.med.api.domain.endereco.Endereco;
 
 public record DadosListagemIndividual(
 
@@ -7,9 +9,7 @@ public record DadosListagemIndividual(
         String email,
         String telefone,
         String cpf,
-        String rua,
-        String cidade,
-        String uf,
+        Endereco endereco,
         Boolean ativos
 ) {
     public DadosListagemIndividual(Paciente paciente) {
@@ -18,9 +18,7 @@ public record DadosListagemIndividual(
         paciente.getEmail(),
         paciente.getTelefone(),
         paciente.getCpf(),
-        paciente.getEndereco().getLogradouro(),
-        paciente.getEndereco().getCidade(),
-        paciente.getEndereco().getUf(),
+        paciente.getEndereco(),
         paciente.getAtivo());
     }
 }
